@@ -30,6 +30,11 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadCategoriaProduto));
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
             label1 = new Label();
             label2 = new Label();
             cbxCategoria = new ComboBox();
@@ -37,11 +42,17 @@
             imgListAddEdEx = new ImageList(components);
             btnEditarCategoria = new Button();
             btnExcluirCategoria = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            button6 = new Button();
-            dataGridView1 = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            btnAdicionarProduto = new Button();
+            btnEditarProduto = new Button();
+            btnExcluirProduto = new Button();
+            dgvProdutos = new DataGridView();
+            clmCodigo = new DataGridViewTextBoxColumn();
+            clmNome = new DataGridViewTextBoxColumn();
+            clmPreco = new DataGridViewTextBoxColumn();
+            clmEstoque = new DataGridViewTextBoxColumn();
+            clmDescricao = new DataGridViewTextBoxColumn();
+            clmQtdMininaEstoque = new DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)dgvProdutos).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -49,18 +60,18 @@
             label1.AutoSize = true;
             label1.Location = new Point(12, 9);
             label1.Name = "label1";
-            label1.Size = new Size(58, 15);
+            label1.Size = new Size(61, 15);
             label1.TabIndex = 0;
-            label1.Text = "Categoria";
+            label1.Text = "Categoria:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(360, 109);
+            label2.Location = new Point(356, 117);
             label2.Name = "label2";
-            label2.Size = new Size(109, 15);
+            label2.Size = new Size(112, 15);
             label2.TabIndex = 1;
-            label2.Text = "Adicionar Produtos";
+            label2.Text = "Adicionar Produtos:";
             // 
             // cbxCategoria
             // 
@@ -68,7 +79,7 @@
             cbxCategoria.Location = new Point(12, 29);
             cbxCategoria.Name = "cbxCategoria";
             cbxCategoria.Size = new Size(121, 23);
-            cbxCategoria.TabIndex = 2;
+            cbxCategoria.TabIndex = 0;
             // 
             // btnAdicionarCategoria
             // 
@@ -77,7 +88,7 @@
             btnAdicionarCategoria.Location = new Point(139, 29);
             btnAdicionarCategoria.Name = "btnAdicionarCategoria";
             btnAdicionarCategoria.Size = new Size(25, 25);
-            btnAdicionarCategoria.TabIndex = 3;
+            btnAdicionarCategoria.TabIndex = 1;
             btnAdicionarCategoria.UseVisualStyleBackColor = true;
             btnAdicionarCategoria.Click += btnAdicionarCategoria_Click;
             // 
@@ -97,7 +108,7 @@
             btnEditarCategoria.Location = new Point(170, 29);
             btnEditarCategoria.Name = "btnEditarCategoria";
             btnEditarCategoria.Size = new Size(25, 25);
-            btnEditarCategoria.TabIndex = 4;
+            btnEditarCategoria.TabIndex = 2;
             btnEditarCategoria.UseVisualStyleBackColor = true;
             btnEditarCategoria.Click += btnEditarCategoria_Click;
             // 
@@ -108,54 +119,139 @@
             btnExcluirCategoria.Location = new Point(202, 29);
             btnExcluirCategoria.Name = "btnExcluirCategoria";
             btnExcluirCategoria.Size = new Size(25, 25);
-            btnExcluirCategoria.TabIndex = 5;
+            btnExcluirCategoria.TabIndex = 3;
             btnExcluirCategoria.UseVisualStyleBackColor = true;
             btnExcluirCategoria.Click += btnExcluirCategoria_Click;
             // 
-            // button4
+            // btnAdicionarProduto
             // 
-            button4.Location = new Point(475, 105);
-            button4.Name = "button4";
-            button4.Size = new Size(75, 23);
-            button4.TabIndex = 6;
-            button4.Text = "button4";
-            button4.UseVisualStyleBackColor = true;
+            btnAdicionarProduto.ImageIndex = 2;
+            btnAdicionarProduto.ImageList = imgListAddEdEx;
+            btnAdicionarProduto.Location = new Point(471, 113);
+            btnAdicionarProduto.Name = "btnAdicionarProduto";
+            btnAdicionarProduto.Size = new Size(25, 25);
+            btnAdicionarProduto.TabIndex = 4;
+            btnAdicionarProduto.UseVisualStyleBackColor = true;
+            btnAdicionarProduto.Click += btnAdicionarProduto_Click;
             // 
-            // button5
+            // btnEditarProduto
             // 
-            button5.Location = new Point(556, 105);
-            button5.Name = "button5";
-            button5.Size = new Size(75, 23);
-            button5.TabIndex = 7;
-            button5.Text = "button5";
-            button5.UseVisualStyleBackColor = true;
+            btnEditarProduto.ImageIndex = 1;
+            btnEditarProduto.ImageList = imgListAddEdEx;
+            btnEditarProduto.Location = new Point(502, 113);
+            btnEditarProduto.Name = "btnEditarProduto";
+            btnEditarProduto.Size = new Size(25, 25);
+            btnEditarProduto.TabIndex = 5;
+            btnEditarProduto.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btnExcluirProduto
             // 
-            button6.Location = new Point(637, 105);
-            button6.Name = "button6";
-            button6.Size = new Size(75, 23);
-            button6.TabIndex = 8;
-            button6.Text = "button6";
-            button6.UseVisualStyleBackColor = true;
+            btnExcluirProduto.ImageIndex = 0;
+            btnExcluirProduto.ImageList = imgListAddEdEx;
+            btnExcluirProduto.Location = new Point(533, 114);
+            btnExcluirProduto.Name = "btnExcluirProduto";
+            btnExcluirProduto.Size = new Size(25, 25);
+            btnExcluirProduto.TabIndex = 6;
+            btnExcluirProduto.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgvProdutos
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(29, 135);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(663, 150);
-            dataGridView1.TabIndex = 9;
+            dgvProdutos.AllowUserToAddRows = false;
+            dgvProdutos.AllowUserToDeleteRows = false;
+            dgvProdutos.AllowUserToResizeColumns = false;
+            dgvProdutos.AllowUserToResizeRows = false;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = SystemColors.Control;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle6.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
+            dgvProdutos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dgvProdutos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvProdutos.Columns.AddRange(new DataGridViewColumn[] { clmCodigo, clmNome, clmPreco, clmEstoque, clmDescricao, clmQtdMininaEstoque });
+            dgvProdutos.Location = new Point(12, 145);
+            dgvProdutos.Name = "dgvProdutos";
+            dgvProdutos.ReadOnly = true;
+            dgvProdutos.RowHeadersVisible = false;
+            dgvProdutos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvProdutos.Size = new Size(547, 293);
+            dgvProdutos.TabIndex = 7;
+            // 
+            // clmCodigo
+            // 
+            clmCodigo.DataPropertyName = "IdProduto";
+            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.Format = "D4";
+            clmCodigo.DefaultCellStyle = dataGridViewCellStyle7;
+            clmCodigo.HeaderText = "idproduto";
+            clmCodigo.Name = "clmCodigo";
+            clmCodigo.ReadOnly = true;
+            clmCodigo.SortMode = DataGridViewColumnSortMode.NotSortable;
+            clmCodigo.Width = 50;
+            // 
+            // clmNome
+            // 
+            clmNome.DataPropertyName = "Nome";
+            clmNome.HeaderText = "Produto";
+            clmNome.Name = "clmNome";
+            clmNome.ReadOnly = true;
+            clmNome.SortMode = DataGridViewColumnSortMode.NotSortable;
+            // 
+            // clmPreco
+            // 
+            clmPreco.DataPropertyName = "Preco";
+            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.Format = "C2";
+            clmPreco.DefaultCellStyle = dataGridViewCellStyle8;
+            clmPreco.HeaderText = "Preço";
+            clmPreco.Name = "clmPreco";
+            clmPreco.ReadOnly = true;
+            clmPreco.SortMode = DataGridViewColumnSortMode.NotSortable;
+            clmPreco.Width = 80;
+            // 
+            // clmEstoque
+            // 
+            clmEstoque.DataPropertyName = "Estoque";
+            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.Format = "D4";
+            clmEstoque.DefaultCellStyle = dataGridViewCellStyle9;
+            clmEstoque.HeaderText = "Estoque";
+            clmEstoque.Name = "clmEstoque";
+            clmEstoque.ReadOnly = true;
+            clmEstoque.SortMode = DataGridViewColumnSortMode.NotSortable;
+            clmEstoque.Width = 80;
+            // 
+            // clmDescricao
+            // 
+            clmDescricao.DataPropertyName = "Descricao";
+            clmDescricao.HeaderText = "Descrição";
+            clmDescricao.Name = "clmDescricao";
+            clmDescricao.ReadOnly = true;
+            clmDescricao.SortMode = DataGridViewColumnSortMode.NotSortable;
+            clmDescricao.Width = 150;
+            // 
+            // clmQtdMininaEstoque
+            // 
+            clmQtdMininaEstoque.DataPropertyName = "QtdMinima";
+            dataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.Format = "D4";
+            clmQtdMininaEstoque.DefaultCellStyle = dataGridViewCellStyle10;
+            clmQtdMininaEstoque.HeaderText = "Qtd Minina Estoque";
+            clmQtdMininaEstoque.Name = "clmQtdMininaEstoque";
+            clmQtdMininaEstoque.ReadOnly = true;
+            clmQtdMininaEstoque.SortMode = DataGridViewColumnSortMode.NotSortable;
+            clmQtdMininaEstoque.Width = 80;
             // 
             // FormCadCategoriaProduto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(720, 450);
-            Controls.Add(dataGridView1);
-            Controls.Add(button6);
-            Controls.Add(button5);
-            Controls.Add(button4);
+            ClientSize = new Size(568, 450);
+            Controls.Add(dgvProdutos);
+            Controls.Add(btnExcluirProduto);
+            Controls.Add(btnEditarProduto);
+            Controls.Add(btnAdicionarProduto);
             Controls.Add(btnExcluirCategoria);
             Controls.Add(btnEditarCategoria);
             Controls.Add(btnAdicionarCategoria);
@@ -164,7 +260,7 @@
             Controls.Add(label1);
             Name = "FormCadCategoriaProduto";
             Text = "FormCadCategoriaProduto";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvProdutos).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -177,10 +273,16 @@
         private Button btnAdicionarCategoria;
         private Button btnEditarCategoria;
         private Button btnExcluirCategoria;
-        private Button button4;
-        private Button button5;
-        private Button button6;
-        private DataGridView dataGridView1;
+        private Button btnAdicionarProduto;
+        private Button btnEditarProduto;
+        private Button btnExcluirProduto;
+        private DataGridView dgvProdutos;
         private ImageList imgListAddEdEx;
+        private DataGridViewTextBoxColumn clmCodigo;
+        private DataGridViewTextBoxColumn clmNome;
+        private DataGridViewTextBoxColumn clmPreco;
+        private DataGridViewTextBoxColumn clmEstoque;
+        private DataGridViewTextBoxColumn clmDescricao;
+        private DataGridViewTextBoxColumn clmQtdMininaEstoque;
     }
 }

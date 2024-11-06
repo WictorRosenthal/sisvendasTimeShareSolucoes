@@ -16,16 +16,13 @@ namespace SisVendas.Models
         [Required, MaxLength(150)]
         public string Nome { get; set; }
 
-        public string Preco { get; set; }
+        public int Estoque { get; set; }
+
+        public Double Preco { get; set; }
 
         public string? Descricao { get; set; }
 
-        public string? Quantidade { get; set; }
-
-
-        [ForeignKey("UnidadeDeMedida")]
-        public int IdUnidadeDeMedida { get; set; }
-        public UnidadeDeMedida UnidadeDeMedida { get; set; }
+        public int? QtdMinima { get; set; }
 
 
         [ForeignKey("Categoria")]

@@ -13,8 +13,6 @@ namespace SisVendas.Models
 
         public DbSet<Produto> Produtos { get; set; }
 
-        public DbSet<UnidadeDeMedida> UnidadeDeMedidas { get; set; }
-
         public DbSet<Pessoa> Pessoas { get; set; }
 
         public DbSet<EnderecoPessoa> EnderecoPessoas { get; set; }

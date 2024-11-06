@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SisVendas.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,16 @@ namespace SisVendas
         public FormProduto()
         {
             InitializeComponent();
+            using (var db = new SisVendasContext())
+            {
+                AtualizarCbxCategoria(db);
+            }
+        }
+        private void AtualizarCbxCategoria(SisVendasContext db)
+        {
+            cbxCategoria.DataSource = db.Categorias.ToList();
+            cbxCategoria.DisplayMember = "Nome";
+            cbxCategoria.ValueMember = "IdCategoria";
         }
     }
 }

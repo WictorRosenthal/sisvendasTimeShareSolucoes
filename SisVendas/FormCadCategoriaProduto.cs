@@ -22,6 +22,25 @@ namespace SisVendas
                 AtualizarCbxCategoria(db);
             }
         }
+        private void AtualizarCbxCategoria(SisVendasContext db)
+        {
+            cbxCategoria.DataSource = db.Categorias.ToList();
+            cbxCategoria.DisplayMember = "Nome";
+            cbxCategoria.ValueMember = "IdCategoria";
+        }
+
+        private void AtualizarProdutos(SisVendasContext db) 
+        {
+            if (cbxCategoria.Items.Count > 0)
+            { 
+                this.Cursor = Cursors.WaitCursor;
+                int idCategoria = (cbxCategoria.SelectedItem as Categoria).IdCategoria;
+                dgvProdutos.DataSource = db.Produtos.Where(x => x.IdCategoria == idCategoria).
+                    Include(x=> x.Categoria).ToList();
+                this.Cursor = Cursors.Default;  
+            }
+        
+        }
 
         private void btnAdicionarCategoria_Click(object sender, EventArgs e)
         {
@@ -42,13 +61,6 @@ namespace SisVendas
                     }
                 }
             }
-        }
-
-        private void AtualizarCbxCategoria(SisVendasContext db)
-        {
-            cbxCategoria.DataSource = db.Categorias.ToList();
-            cbxCategoria.DisplayMember = "Nome";
-            cbxCategoria.ValueMember = "IdCategoria";
         }
 
         private void btnEditarCategoria_Click(object sender, EventArgs e)
@@ -109,6 +121,34 @@ namespace SisVendas
             }
         }
 
+        private void btnAdicionarProduto_Click(object sender, EventArgs e)
+        {
+            using (var form = new FormProduto())
+            {
+                form.Text = "Adicionar Produto";
+                form.cbxCategoria.SelectedIndex = cbxCategoria.SelectedIndex;
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+                    using (var db = new SisVendasContext())
+                    {
+                        Produto produto = new Produto();
+                        produto.Nome = form.txtNome.Text;
+                        produto.Estoque = Convert.ToInt32(form.nudQtdEstoque.Value);
+                        produto.Preco = (double)form.nudPreco.Value;
+                        produto.Descricao = form.rtbDescricao.Text;
+                        produto.QtdMinima = Convert.ToInt32(form.nudQtdMinimaEmEstoque.Value);
+                        produto.IdCategoria =
+                            (form.cbxCategoria.SelectedItem as Categoria).IdCategoria;
+                        db.Produtos.Add(produto);
+                        db.SaveChanges();
+                        MessageBox.Show("Produto Adicionado", "Informação");
+                        
+
+                    }
+                }
+            }
+
+        }
     }
 
 }
