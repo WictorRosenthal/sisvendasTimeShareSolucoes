@@ -179,6 +179,7 @@
             Name = "FormProduto";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Produto";
+            Load += FormProduto_Load;
             ((System.ComponentModel.ISupportInitialize)nudPreco).EndInit();
             ((System.ComponentModel.ISupportInitialize)nudQtdEstoque).EndInit();
             ((System.ComponentModel.ISupportInitialize)nudQtdMinimaEmEstoque).EndInit();
