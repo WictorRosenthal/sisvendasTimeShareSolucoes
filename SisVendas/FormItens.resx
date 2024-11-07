@@ -117,78 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="imgListAddEdEx.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="imgListAddEdEx.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAEZTeXN0ZW0uV2luZG93cy5Gb3JtcywgQ3VsdHVyZT1uZXV0cmFs
-        LCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5BQEAAAAmU3lzdGVtLldpbmRvd3MuRm9ybXMu
-        SW1hZ2VMaXN0U3RyZWFtZXIBAAAABERhdGEHAgIAAAAJAwAAAA8DAAAA7gkAAAJNU0Z0AUkBTAIBAQMB
-        AAF4AQABeAEAARABAAEQAQAE/wEhAQAI/wFCAU0BNgcAATYDAAEoAwABQAMAARADAAEBAQABIAYAARAa
-        AAQBA1UBsQMPAf4DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DDwH+A1UBsQQBCAADUwGnA0YBgQMfASxE
-        AAMeASsDTAGOA1sB0wNNAfMDTQHzA1sB0wNLAY0DHgEqWAADJgE4AwAB/wMAAf8DIQH7AwAB/wMeAf0D
-        HgH9AwAB/wMhAfsDAAH/AwAB/wMmATgIAANEAXsDAAH/AwAB/wNcAdYDQQFzNAADBQEGA00BkgMeAfwD
-        AAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DIQH7A0wBkAMEAQVQAAMzAVIDAAH/AwAB/wMqAUADWwHsA04B
-        lwNOAZcDWwHsAyoBQAMAAf8DAAH/AzMBUggAAxsBJgMAAf8DAAH/A1QB8QMvAUkDWAG6AyQBNSgAAwUB
-        BgNXAbwDAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/A1kBuwMEAQVMAAM9AWcD
-        AAH/AwAB/wMVAR0DVAHxA0kBiANJAYgDVAHxAxUBHQMAAf8DAAH/Az0BZwwAA10B0QNFAfQDMQFOA1wB
-        yAMAAf8DUAHwAyUBNyQAA00BkwMAAf8DAAH/AwAB/wMAAf8DAAH/AzwB9wM8AfcDAAH/AwAB/wMAAf8D
-        AAH/AwAB/wNMAZBMAANGAX0DAAH/AwAB/wMMARADDwH+A0kBiANJAYgDDwH+AwwBEAMAAf8DAAH/A0YB
-        fQwAA0ABcQMxAU4DXAHIAwAB/wMAAf8DAAH/A1AB8AMlATccAAMeASsDHgH8AwAB/wMAAf8DAAH/AwAB
-        /wMAAf8DOgFiAzoBYgMAAf8DAAH/AwAB/wMAAf8DAAH/Ax4B/AMeASpIAANNAZIDAAH/Ax4B/AMOARID
-        AAH/A0kBiANJAYgDAAH/Aw4BEgMeAfwDAAH/A00BkhAAA1YBtgMAAf8DAAH/AwAB/wMAAf8DAAH/A1IB
-        7wMkATUYAANLAY8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DNQFVAzUBVQMAAf8DAAH/AwAB/wMAAf8D
-        AAH/AwAB/wNLAYxIAANSAagDAAH/A1gB7QMYASEDAAH/A0kBiANJAYgDAAH/AxgBIQNYAe0DAAH/A1IB
-        qBAAAyEBLwNcAesDAAH/AwAB/wMAAf8DAAH/AwAB/wNQAfADJQE3FAADXwHVAwAB/wMAAf8DAAH/AwAB
-        /wMAAf8DAAH/AzUBVQM1AVUDAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DWwHTSAADWAG9AwAB/wNeAd0D
-        IgExAwAB/wNJAYgDSQGIAwAB/wMiATEDXgHdAwAB/wNYAb0UAAMhAS8DXAHrAwAB/wMAAf8DAAH/AwAB
-        /wMAAf8DUAHwAyUBNxAAA04B8gMAAf8DAAH/AzkB9gM6AWIDNQFVAzUBVQMVARwDFQEcAzUBVQM1AVUD
-        OwFjAzwB9wMAAf8DAAH/A04B8kgAA1sB0wMAAf8DWwHNAysBQQMAAf8DSQGIA0kBiAMAAf8DKwFBA1sB
-        zQMAAf8DWwHTGAADIQEvA1wB6wMAAf8DAAH/AwAB/wMAAf8DAAH/A1AB8AMlATcMAANOAfIDAAH/AwAB
-        /wM5AfYDOgFiAzUBVQM1AVUDFQEcAxUBHAM1AVUDNQFVAzoBYgM8AfcDAAH/AwAB/wNOAfJIAANbAegD
-        AAH/A1oBvwMzAVEDAAH/A0oBiQNKAYkDAAH/AzMBUQNaAb8DAAH/A1sB6BwAAyEBLwNcAesDAAH/AwAB
-        /wMAAf8DAAH/AwAB/wNQAfADJQE3CAADXwHVAwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AzUBVQM1AVUD
-        AAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DWwHTRAAEAQMeAfwDAAH/AyEB+wNgAeADAAH/A1gB7QNWAe4D
-        AAH/A10B3wMhAfsDAAH/Ax4B/AQBHAADIQEvA1sB7AMAAf8DAAH/AwAB/wMAAf8DAAH/A1IB7wMdASkE
-        AANMAZEDAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DNQFVAzUBVQMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB
-        /wNMAY5EAAMCAQMDMwFQAzMBUAMzAVADMwFQAzMBUAMzAVADMwFQAzMBUAMzAVADMwFQAzMBUAMzAVAD
-        AgEDIAADIQEvA1sB7AMAAf8DAAH/AwAB/wMAAf8DVQGuAzcBWgMlATYDHwEsAx4B/AMAAf8DAAH/AwAB
-        /wMAAf8DAAH/AzoBYgM6AWIDAAH/AwAB/wMAAf8DAAH/AwAB/wMeAfwDHgErRAADSAGEA1kBwANZAcAD
-        WQHAA1kBwANZAcADWQHAA1kBwANZAcADWQHAA1kBwANZAcADWQHAA0gBhCQAAyEBLwNbAewDAAH/AwAB
-        /wNVAa4DOAFcAyEB+wNeAd0EAANOAZUDAAH/AwAB/wMAAf8DAAH/AwAB/wM8AfcDPAH3AwAB/wMAAf8D
-        AAH/AwAB/wMAAf8DTQGSSAADYAHbAwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB
-        /wMAAf8DAAH/A2AB2ygAAyEBLwNbAewDVQGuAzgBXAMhAfsDAAH/A1sB5AQAAwUBBgNYAb0DAAH/AwAB
-        /wMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMAAf8DAAH/A1cBvAMFAQZIAAMGAQcDGAEgAxgBIAM1AVYD
-        WgHHAxgBIAMYASADGAEgAxgBIANaAccDNQFWAxgBIAMYASADBgEHLAADGwElAzcBWgMhAfsDAAH/AzkB
-        9gMsAUMIAAMFAQYDTgGVAx4B/QMAAf8DAAH/AwAB/wMAAf8DAAH/AwAB/wMeAfwDTQGTAwUBBlgAAwMB
-        BANYAboDUAHwA1AB8ANQAfADUAHwA1gBugMDAQQ8AAMhATADXAHZA14B4wMrAUIUAAMfASwDTAGQA10B
-        1ANFAfQDRQH0A10B1ANMAZADHwEsUAABQgFNAT4HAAE+AwABKAMAAUADAAEQAwABAQEAAQEFAAGAFwAD
-        /wEAAcABAwEfAf8B8AEPAgABwAEDAQcB/wHAAQMCAAHAAQMBAQH/AYABAQIAAcABAwGAAf8BgAEBAgAB
-        wAEDAYABfwQAAcABAwHAAT8EAAHAAQMBwAEfBAABwAEDAeABDwQAAcABAwHwAQcEAAHAAQMB+AEDBAAB
-        gAEBAfwBAQQAAYABAQH+BQABgAEBAf8BAAGAAQECAAGAAQEB/wKAAQECAAGAAQEB/wLAAQMCAAHwAQ8B
-        /wHhAfABDwIACw==
-</value>
-  </data>
-  <metadata name="clmCodigo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="clmProduto.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="clmNome.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="clmProduto.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </metadata>
-  <metadata name="clmPreco.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="clmEstoque.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="clmDescricao.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="clmQtdMininaEstoque.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>25</value>
   </metadata>
 </root>

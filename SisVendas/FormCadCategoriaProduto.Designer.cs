@@ -263,6 +263,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "FormCadCategoriaProduto";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "FormCadCategoriaProduto";
             Load += FormCadCategoriaProduto_Load;
             ((System.ComponentModel.ISupportInitialize)dgvProdutos).EndInit();
