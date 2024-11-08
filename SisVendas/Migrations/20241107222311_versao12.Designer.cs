@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using SisVendas.Models;
@@ -11,9 +12,11 @@ using SisVendas.Models;
 namespace SisVendas.Migrations
 {
     [DbContext(typeof(SisVendasContext))]
-    partial class SisVendasContextModelSnapshot : ModelSnapshot
+    [Migration("20241107222311_versao12")]
+    partial class versao12
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -246,7 +249,7 @@ namespace SisVendas.Migrations
                     b.HasOne("SisVendas.Models.Pessoa", "Pessoa")
                         .WithMany()
                         .HasForeignKey("IdPessoa")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Pessoa");
@@ -257,7 +260,7 @@ namespace SisVendas.Migrations
                     b.HasOne("SisVendas.Models.Pessoa", "Pessoa")
                         .WithMany()
                         .HasForeignKey("IdPessoa")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Pessoa");
@@ -268,13 +271,13 @@ namespace SisVendas.Migrations
                     b.HasOne("SisVendas.Models.Produto", "Produto")
                         .WithMany()
                         .HasForeignKey("IdProduto")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("SisVendas.Models.Venda", "Venda")
                         .WithMany()
                         .HasForeignKey("IdVenda")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Produto");
@@ -287,7 +290,7 @@ namespace SisVendas.Migrations
                     b.HasOne("SisVendas.Models.Categoria", "Categoria")
                         .WithMany("Produtos")
                         .HasForeignKey("IdCategoria")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Categoria");
@@ -298,7 +301,7 @@ namespace SisVendas.Migrations
                     b.HasOne("SisVendas.Models.Pessoa", "Pessoa")
                         .WithMany()
                         .HasForeignKey("IdPessoa")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Pessoa");

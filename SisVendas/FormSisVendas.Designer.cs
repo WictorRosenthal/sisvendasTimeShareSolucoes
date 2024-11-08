@@ -30,9 +30,6 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
             imgListPedido = new ImageList(components);
             menuStrip1 = new MenuStrip();
             cadastrosToolStripMenuItem = new ToolStripMenuItem();
@@ -45,8 +42,8 @@
             cbxClientePedido = new ComboBox();
             label3 = new Label();
             label4 = new Label();
-            dgvItensSelecionados = new DataGridView();
             groupBox1 = new GroupBox();
+            dgvItensSelecionados = new DataGridView();
             btnExcluirItemPedido = new Button();
             btnAterarItenPedido = new Button();
             label7 = new Label();
@@ -65,13 +62,11 @@
             label10 = new Label();
             textBox1 = new TextBox();
             cbxVendedorPedido = new ComboBox();
-            clmProduto = new DataGridViewTextBoxColumn();
-            clmQuantidade = new DataGridViewTextBoxColumn();
-            clmValorUnitario = new DataGridViewTextBoxColumn();
-            clmValorTotalIten = new DataGridViewTextBoxColumn();
+            label11 = new Label();
+            txtDataDoPedido = new TextBox();
             menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvItensSelecionados).BeginInit();
             groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvItensSelecionados).BeginInit();
             SuspendLayout();
             // 
             // imgListPedido
@@ -123,6 +118,7 @@
             txtNome.Size = new Size(184, 23);
             txtNome.TabIndex = 3;
             txtNome.TextChanged += txtNome_TextChanged;
+            txtNome.KeyPress += txtNome_KeyPress;
             // 
             // label1
             // 
@@ -137,7 +133,7 @@
             // 
             btnAdicionarItenPedido.ImageIndex = 5;
             btnAdicionarItenPedido.ImageList = imgListPedido;
-            btnAdicionarItenPedido.Location = new Point(196, 37);
+            btnAdicionarItenPedido.Location = new Point(430, 36);
             btnAdicionarItenPedido.Name = "btnAdicionarItenPedido";
             btnAdicionarItenPedido.Size = new Size(25, 25);
             btnAdicionarItenPedido.TabIndex = 4;
@@ -149,9 +145,10 @@
             label2.AutoSize = true;
             label2.Location = new Point(6, 19);
             label2.Name = "label2";
-            label2.Size = new Size(104, 15);
+            label2.Size = new Size(145, 15);
             label2.TabIndex = 4;
-            label2.Text = "Adicionar Produto";
+            label2.Text = "Digite o nome do produto";
+            label2.Click += label2_Click;
             // 
             // cbxClientePedido
             // 
@@ -180,22 +177,9 @@
             label4.TabIndex = 9;
             label4.Text = "Vendedor:";
             // 
-            // dgvItensSelecionados
-            // 
-            dgvItensSelecionados.AllowUserToAddRows = false;
-            dgvItensSelecionados.AllowUserToDeleteRows = false;
-            dgvItensSelecionados.AllowUserToResizeColumns = false;
-            dgvItensSelecionados.AllowUserToResizeRows = false;
-            dgvItensSelecionados.BorderStyle = BorderStyle.None;
-            dgvItensSelecionados.Columns.AddRange(new DataGridViewColumn[] { clmProduto, clmQuantidade, clmValorUnitario, clmValorTotalIten });
-            dgvItensSelecionados.Location = new Point(6, 68);
-            dgvItensSelecionados.Name = "dgvItensSelecionados";
-            dgvItensSelecionados.ReadOnly = true;
-            dgvItensSelecionados.Size = new Size(496, 146);
-            dgvItensSelecionados.TabIndex = 8;
-            // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(dgvItensSelecionados);
             groupBox1.Controls.Add(btnExcluirItemPedido);
             groupBox1.Controls.Add(btnAterarItenPedido);
             groupBox1.Controls.Add(label7);
@@ -204,7 +188,6 @@
             groupBox1.Controls.Add(txtValorUnitario);
             groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(txtQuantidade);
-            groupBox1.Controls.Add(dgvItensSelecionados);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(txtNome);
             groupBox1.Controls.Add(btnAdicionarItenPedido);
@@ -216,11 +199,22 @@
             groupBox1.Text = "Itens do Pedido";
             groupBox1.Enter += groupBox1_Enter;
             // 
+            // dgvItensSelecionados
+            // 
+            dgvItensSelecionados.AllowUserToAddRows = false;
+            dgvItensSelecionados.AllowUserToDeleteRows = false;
+            dgvItensSelecionados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvItensSelecionados.Location = new Point(6, 66);
+            dgvItensSelecionados.Name = "dgvItensSelecionados";
+            dgvItensSelecionados.ReadOnly = true;
+            dgvItensSelecionados.Size = new Size(532, 150);
+            dgvItensSelecionados.TabIndex = 17;
+            // 
             // btnExcluirItemPedido
             // 
             btnExcluirItemPedido.ImageIndex = 3;
             btnExcluirItemPedido.ImageList = imgListPedido;
-            btnExcluirItemPedido.Location = new Point(478, 220);
+            btnExcluirItemPedido.Location = new Point(431, 228);
             btnExcluirItemPedido.Name = "btnExcluirItemPedido";
             btnExcluirItemPedido.Size = new Size(25, 25);
             btnExcluirItemPedido.TabIndex = 10;
@@ -230,7 +224,7 @@
             // 
             btnAterarItenPedido.ImageIndex = 4;
             btnAterarItenPedido.ImageList = imgListPedido;
-            btnAterarItenPedido.Location = new Point(447, 220);
+            btnAterarItenPedido.Location = new Point(400, 228);
             btnAterarItenPedido.Name = "btnAterarItenPedido";
             btnAterarItenPedido.Size = new Size(25, 25);
             btnAterarItenPedido.TabIndex = 9;
@@ -239,7 +233,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(413, 19);
+            label7.Location = new Point(366, 19);
             label7.Name = "label7";
             label7.Size = new Size(49, 15);
             label7.TabIndex = 16;
@@ -247,7 +241,7 @@
             // 
             // txtEstoque
             // 
-            txtEstoque.Location = new Point(403, 37);
+            txtEstoque.Location = new Point(356, 37);
             txtEstoque.Name = "txtEstoque";
             txtEstoque.ReadOnly = true;
             txtEstoque.Size = new Size(69, 23);
@@ -257,7 +251,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(309, 19);
+            label6.Location = new Point(270, 19);
             label6.Name = "label6";
             label6.Size = new Size(81, 15);
             label6.TabIndex = 14;
@@ -265,7 +259,7 @@
             // 
             // txtValorUnitario
             // 
-            txtValorUnitario.Location = new Point(310, 37);
+            txtValorUnitario.Location = new Point(271, 37);
             txtValorUnitario.Name = "txtValorUnitario";
             txtValorUnitario.ReadOnly = true;
             txtValorUnitario.Size = new Size(78, 23);
@@ -275,7 +269,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(227, 19);
+            label5.Location = new Point(196, 19);
             label5.Name = "label5";
             label5.Size = new Size(69, 15);
             label5.TabIndex = 12;
@@ -283,7 +277,7 @@
             // 
             // txtQuantidade
             // 
-            txtQuantidade.Location = new Point(227, 37);
+            txtQuantidade.Location = new Point(196, 37);
             txtQuantidade.Name = "txtQuantidade";
             txtQuantidade.Size = new Size(69, 23);
             txtQuantidade.TabIndex = 5;
@@ -378,44 +372,23 @@
             cbxVendedorPedido.TabIndex = 26;
             cbxVendedorPedido.SelectedIndexChanged += cbxVendedorPedido_SelectedIndexChanged;
             // 
-            // clmProduto
+            // label11
             // 
-            clmProduto.DataPropertyName = "txtNome";
-            clmProduto.HeaderText = "Produto";
-            clmProduto.Name = "clmProduto";
-            clmProduto.ReadOnly = true;
-            clmProduto.SortMode = DataGridViewColumnSortMode.NotSortable;
-            clmProduto.Width = 150;
+            label11.AutoSize = true;
+            label11.Location = new Point(157, 415);
+            label11.Name = "label11";
+            label11.Size = new Size(91, 15);
+            label11.TabIndex = 28;
+            label11.Text = "Data do Pedido:";
             // 
-            // clmQuantidade
+            // txtDataDoPedido
             // 
-            clmQuantidade.DataPropertyName = "Quantidade";
-            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.Format = "D4";
-            clmQuantidade.DefaultCellStyle = dataGridViewCellStyle7;
-            clmQuantidade.HeaderText = "Quantidade";
-            clmQuantidade.Name = "clmQuantidade";
-            clmQuantidade.ReadOnly = true;
-            // 
-            // clmValorUnitario
-            // 
-            clmValorUnitario.DataPropertyName = "Preco";
-            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.Format = "C2";
-            clmValorUnitario.DefaultCellStyle = dataGridViewCellStyle8;
-            clmValorUnitario.HeaderText = "Valor Unitário";
-            clmValorUnitario.Name = "clmValorUnitario";
-            clmValorUnitario.ReadOnly = true;
-            // 
-            // clmValorTotalIten
-            // 
-            clmValorTotalIten.DataPropertyName = "ValorTotalIten";
-            dataGridViewCellStyle9.Format = "C2";
-            clmValorTotalIten.DefaultCellStyle = dataGridViewCellStyle9;
-            clmValorTotalIten.HeaderText = "Valor Total Iten";
-            clmValorTotalIten.Name = "clmValorTotalIten";
-            clmValorTotalIten.ReadOnly = true;
-            clmValorTotalIten.SortMode = DataGridViewColumnSortMode.NotSortable;
+            txtDataDoPedido.Location = new Point(254, 408);
+            txtDataDoPedido.Name = "txtDataDoPedido";
+            txtDataDoPedido.ReadOnly = true;
+            txtDataDoPedido.Size = new Size(173, 23);
+            txtDataDoPedido.TabIndex = 27;
+            txtDataDoPedido.TabStop = false;
             // 
             // Form1
             // 
@@ -423,6 +396,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(800, 450);
+            Controls.Add(label11);
+            Controls.Add(txtDataDoPedido);
             Controls.Add(cbxVendedorPedido);
             Controls.Add(label10);
             Controls.Add(textBox1);
@@ -449,9 +424,9 @@
             Load += Form1_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvItensSelecionados).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvItensSelecionados).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -470,7 +445,6 @@
         private ComboBox cbxClientePedido;
         private Label label3;
         private Label label4;
-        private DataGridView dgvItensSelecionados;
         private GroupBox groupBox1;
         private Label label5;
         private TextBox txtQuantidade;
@@ -490,9 +464,8 @@
         private Label label10;
         private TextBox textBox1;
         private ComboBox cbxVendedorPedido;
-        private DataGridViewTextBoxColumn clmProduto;
-        private DataGridViewTextBoxColumn clmQuantidade;
-        private DataGridViewTextBoxColumn clmValorUnitario;
-        private DataGridViewTextBoxColumn clmValorTotalIten;
+        private Label label11;
+        private TextBox txtDataDoPedido;
+        private DataGridView dgvItensSelecionados;
     }
 }

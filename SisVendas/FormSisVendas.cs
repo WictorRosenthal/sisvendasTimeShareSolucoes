@@ -1,13 +1,28 @@
 using SisVendas.Models;
+using System.Data;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace SisVendas
 {
     public partial class Form1 : Form
     {
+        #region Váriaveis de Quantidade, SubTotal, Total, Preço e Carrinho.
+        int qtd;
+        double subtotal, total, preco;
+        DataTable carrinho = new DataTable();
+        #endregion
         public Form1()
         {
             InitializeComponent();
+
+            carrinho.Columns.Add("Código", typeof(int));
+            carrinho.Columns.Add("Produto", typeof(string));
+            carrinho.Columns.Add("Qtd", typeof(int));
+            carrinho.Columns.Add("Preço", typeof(double));
+            carrinho.Columns.Add("Subtotal", typeof(double));
+
+            dgvItensSelecionados.DataSource = carrinho;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -15,6 +30,35 @@ namespace SisVendas
 
         }
 
+        #region Meétodo que vai buscar o produto por nome
+        public Produto RetornaProduto(string nome)
+        {
+            try
+            {
+                using (var db = new SisVendasContext())
+                {
+                    Produto produto = db.Produtos.FirstOrDefault(p => p.Nome == nome);
+
+
+                    if (produto != null)
+                    {
+                        return produto;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Nenhum produto encontrado com este nome!", "Informação");
+                        return null;
+                    }
+                }
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Ocorreu um erro: " + erro.Message, "Informação");
+                return null;
+            }
+        }
+
+        #endregion
         private void categoriasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (var form = new FormCadCategoriaProduto())
@@ -70,9 +114,36 @@ namespace SisVendas
         private void btnAdicionarItenPedido_Click(object sender, EventArgs e)
         {
             using (var form = new FormItens())
-            { 
+            {
                 form.ShowDialog();
             }
+        }
+
+        private void txtNome_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                string nomeProduto = txtNome.Text.Trim();
+                Produto produto = RetornaProduto(nomeProduto);
+
+                if (produto != null)
+                {
+                    txtValorUnitario.Text = produto.Preco.ToString("C");
+                    txtEstoque.Text = produto.Estoque.ToString();
+                }
+                else
+                {
+                    txtValorUnitario.Text = "";
+                    txtEstoque.Text = "";
+
+                }
+
+            }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

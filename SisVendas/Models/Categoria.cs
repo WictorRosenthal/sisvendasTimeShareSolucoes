@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SisVendas.Models
 {
-    class Categoria
+    public class Categoria
     {
         [Key]
         public int IdCategoria { get; set; }

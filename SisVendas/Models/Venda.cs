@@ -8,19 +8,16 @@ using System.Threading.Tasks;
 
 namespace SisVendas.Models
 {
-    public class ContatoPessoa
+    public class Venda
     {
         [Key]
-        public int IdContatoPessoa { get; set; }
+        public int IdVenda { get; set; }   
 
-        [MaxLength(3)]
-        public string DDDfone { get; set; }
+        public DateTime DataVenda { get; set; }
 
-        [MaxLength(10)]
-        public string Telefone { get; set; }
+        public Double TotalVenda { get; set; }
 
-        [MaxLength(250)]
-        public string Email { get; set; }
+        public string Descricao { get; set; }
 
         [ForeignKey("Pessoa")]
         public int IdPessoa { get; set; }

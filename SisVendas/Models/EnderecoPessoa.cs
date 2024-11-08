@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SisVendas.Models
 {
-    class EnderecoPessoa
+    public class EnderecoPessoa
     {
         [Key]
         public int IdEnderecoPessoa { get; set; }

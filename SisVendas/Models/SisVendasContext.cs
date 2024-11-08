@@ -17,6 +17,10 @@ namespace SisVendas.Models
 
         public DbSet<EnderecoPessoa> EnderecoPessoas { get; set; }
 
+        public DbSet<ItenVenda> ItenVenda { get; set; }
+
+        public DbSet<Venda> Venda { get; set; }
+
         public DbSet<ContatoPessoa> contatoPessoas { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
