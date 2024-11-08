@@ -1,6 +1,7 @@
 using SisVendas.Models;
 using System;
 using System.Data;
+using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -115,15 +116,21 @@ namespace SisVendas
         private void btnAdicionarItenPedido_Click(object sender, EventArgs e)
         {
 
-            Produto produto = new Produto();
             qtd = int.Parse(txtQuantidade.Text);
-            preco = double.Parse(produto.Preco.ToString());
+            preco = double.Parse(txtValorUnitario.Text, NumberStyles.Currency, new CultureInfo("pt-BR"));
             //preco = double.Parse(txtValorUnitario.Text);
             subtotal = qtd * preco;
             total += subtotal;
             carrinho.Rows.Add(txtNome.Text, txtQuantidade.Text, preco, subtotal);
-           
-           
+            txtValorTotal.Text = total.ToString();
+            txtNome.Clear();
+            txtQuantidade.Clear();
+            txtValorUnitario.Clear();
+            txtEstoque.Clear();
+
+
+
+
 
         }
 
