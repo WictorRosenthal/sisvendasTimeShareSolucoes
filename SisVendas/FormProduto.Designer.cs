@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProduto));
             button2 = new Button();
             button1 = new Button();
             txtNome = new TextBox();
@@ -176,10 +177,11 @@
             Controls.Add(button1);
             Controls.Add(txtNome);
             Controls.Add(label1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormProduto";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Produto";
-            Load += FormProduto_Load;
+        
             ((System.ComponentModel.ISupportInitialize)nudPreco).EndInit();
             ((System.ComponentModel.ISupportInitialize)nudQtdEstoque).EndInit();
             ((System.ComponentModel.ISupportInitialize)nudQtdMinimaEmEstoque).EndInit();

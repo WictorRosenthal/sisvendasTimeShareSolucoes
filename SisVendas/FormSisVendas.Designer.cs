@@ -30,6 +30,7 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             imgListPedido = new ImageList(components);
             menuStrip1 = new MenuStrip();
             cadastrosToolStripMenuItem = new ToolStripMenuItem();
@@ -41,31 +42,26 @@
             label2 = new Label();
             cbxClientePedido = new ComboBox();
             label3 = new Label();
-            label4 = new Label();
             groupBox1 = new GroupBox();
+            label4 = new Label();
+            btnImprimirPedido = new Button();
             dgvItensSelecionados = new DataGridView();
             btnExcluirItemPedido = new Button();
             label7 = new Label();
             txtEstoque = new TextBox();
             label6 = new Label();
+            txtValorTotal = new TextBox();
             txtValorUnitario = new TextBox();
             label5 = new Label();
             txtQuantidade = new TextBox();
-            label8 = new Label();
-            txtQtdItens = new TextBox();
-            label9 = new Label();
-            txtValorTotal = new TextBox();
-            btnFinalizarPedido = new Button();
-            btnCancelarPedido = new Button();
-            btnExcluirPedido = new Button();
-            label10 = new Label();
-            textBox1 = new TextBox();
-            cbxVendedorPedido = new ComboBox();
-            label11 = new Label();
-            txtDataDoPedido = new TextBox();
+            printPedido = new System.Drawing.Printing.PrintDocument();
+            txtIdPessoa = new TextBox();
+            label12 = new Label();
+            pictureBox1 = new PictureBox();
             menuStrip1.SuspendLayout();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvItensSelecionados).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // imgListPedido
@@ -85,7 +81,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { cadastrosToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 24);
+            menuStrip1.Size = new Size(610, 24);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -116,15 +112,16 @@
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(184, 23);
             txtNome.TabIndex = 3;
-            txtNome.TextChanged += txtNome_TextChanged;
+           
             txtNome.KeyPress += txtNome_KeyPress;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(347, 33);
+            label1.Font = new Font("Arial Black", 20F);
+            label1.Location = new Point(208, 33);
             label1.Name = "label1";
-            label1.Size = new Size(44, 15);
+            label1.Size = new Size(117, 38);
             label1.TabIndex = 2;
             label1.Text = "Pedido";
             // 
@@ -144,45 +141,39 @@
             label2.AutoSize = true;
             label2.Location = new Point(6, 19);
             label2.Name = "label2";
-            label2.Size = new Size(145, 15);
+            label2.Size = new Size(148, 15);
             label2.TabIndex = 4;
-            label2.Text = "Digite o nome do produto";
-            label2.Click += label2_Click;
+            label2.Text = "Digite o nome do produto!";
+           
             // 
             // cbxClientePedido
             // 
             cbxClientePedido.FormattingEnabled = true;
-            cbxClientePedido.Location = new Point(62, 81);
+            cbxClientePedido.Location = new Point(12, 85);
             cbxClientePedido.Name = "cbxClientePedido";
-            cbxClientePedido.Size = new Size(155, 23);
+            cbxClientePedido.Size = new Size(204, 23);
             cbxClientePedido.TabIndex = 2;
-            cbxClientePedido.SelectedIndexChanged += cbxClientePedido_SelectedIndexChanged;
+            cbxClientePedido.KeyPress += cbxClientePedido_KeyPress;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(12, 85);
+            label3.Location = new Point(12, 67);
             label3.Name = "label3";
-            label3.Size = new Size(47, 15);
+            label3.Size = new Size(204, 15);
             label3.TabIndex = 7;
-            label3.Text = "Cliente:";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(12, 54);
-            label4.Name = "label4";
-            label4.Size = new Size(60, 15);
-            label4.TabIndex = 9;
-            label4.Text = "Vendedor:";
+            label3.Text = "Digite o nome do cliente para buscar!";
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(label4);
+            groupBox1.Controls.Add(btnImprimirPedido);
             groupBox1.Controls.Add(dgvItensSelecionados);
             groupBox1.Controls.Add(btnExcluirItemPedido);
             groupBox1.Controls.Add(label7);
             groupBox1.Controls.Add(txtEstoque);
             groupBox1.Controls.Add(label6);
+            groupBox1.Controls.Add(txtValorTotal);
             groupBox1.Controls.Add(txtValorUnitario);
             groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(txtQuantidade);
@@ -191,20 +182,51 @@
             groupBox1.Controls.Add(btnAdicionarItenPedido);
             groupBox1.Location = new Point(12, 115);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(776, 286);
+            groupBox1.Size = new Size(555, 286);
             groupBox1.TabIndex = 14;
             groupBox1.TabStop = false;
             groupBox1.Text = "Itens do Pedido";
-            groupBox1.Enter += groupBox1_Enter;
+          
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(9, 229);
+            label4.Name = "label4";
+            label4.Size = new Size(64, 15);
+            label4.TabIndex = 19;
+            label4.Text = "Valor Total:";
+            // 
+            // btnImprimirPedido
+            // 
+            btnImprimirPedido.Location = new Point(430, 225);
+            btnImprimirPedido.Name = "btnImprimirPedido";
+            btnImprimirPedido.Size = new Size(106, 23);
+            btnImprimirPedido.TabIndex = 18;
+            btnImprimirPedido.Text = "Imprimir Pedido";
+            btnImprimirPedido.UseVisualStyleBackColor = true;
+            btnImprimirPedido.Click += btnImprimirPedido_Click;
             // 
             // dgvItensSelecionados
             // 
             dgvItensSelecionados.AllowUserToAddRows = false;
             dgvItensSelecionados.AllowUserToDeleteRows = false;
+            dgvItensSelecionados.AllowUserToResizeColumns = false;
+            dgvItensSelecionados.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvItensSelecionados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvItensSelecionados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvItensSelecionados.Location = new Point(6, 66);
             dgvItensSelecionados.Name = "dgvItensSelecionados";
             dgvItensSelecionados.ReadOnly = true;
+            dgvItensSelecionados.RightToLeft = RightToLeft.No;
+            dgvItensSelecionados.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvItensSelecionados.Size = new Size(532, 150);
             dgvItensSelecionados.TabIndex = 17;
             // 
@@ -246,6 +268,15 @@
             label6.TabIndex = 14;
             label6.Text = "Valor Unitário ";
             // 
+            // txtValorTotal
+            // 
+            txtValorTotal.Location = new Point(79, 225);
+            txtValorTotal.Name = "txtValorTotal";
+            txtValorTotal.ReadOnly = true;
+            txtValorTotal.Size = new Size(69, 23);
+            txtValorTotal.TabIndex = 12;
+            txtValorTotal.TabStop = false;
+            // 
             // txtValorUnitario
             // 
             txtValorUnitario.Location = new Point(271, 37);
@@ -271,133 +302,42 @@
             txtQuantidade.Size = new Size(69, 23);
             txtQuantidade.TabIndex = 5;
             // 
-            // label8
+            // txtIdPessoa
             // 
-            label8.AutoSize = true;
-            label8.Location = new Point(35, 348);
-            label8.Name = "label8";
-            label8.Size = new Size(32, 15);
-            label8.TabIndex = 18;
-            label8.Text = "Itens";
+            txtIdPessoa.Location = new Point(316, 85);
+            txtIdPessoa.Name = "txtIdPessoa";
+            txtIdPessoa.ReadOnly = true;
+            txtIdPessoa.Size = new Size(100, 23);
+            txtIdPessoa.TabIndex = 29;
+            txtIdPessoa.TabStop = false;
             // 
-            // txtQtdItens
+            // label12
             // 
-            txtQtdItens.Location = new Point(25, 366);
-            txtQtdItens.Name = "txtQtdItens";
-            txtQtdItens.ReadOnly = true;
-            txtQtdItens.Size = new Size(69, 23);
-            txtQtdItens.TabIndex = 11;
-            txtQtdItens.TabStop = false;
+            label12.AutoSize = true;
+            label12.Location = new Point(223, 89);
+            label12.Name = "label12";
+            label12.Size = new Size(87, 15);
+            label12.TabIndex = 30;
+            label12.Text = "Codigo cliente:";
             // 
-            // label9
+            // pictureBox1
             // 
-            label9.AutoSize = true;
-            label9.Location = new Point(113, 348);
-            label9.Name = "label9";
-            label9.Size = new Size(61, 15);
-            label9.TabIndex = 20;
-            label9.Text = "Valor Total";
-            // 
-            // txtValorTotal
-            // 
-            txtValorTotal.Location = new Point(109, 366);
-            txtValorTotal.Name = "txtValorTotal";
-            txtValorTotal.ReadOnly = true;
-            txtValorTotal.Size = new Size(69, 23);
-            txtValorTotal.TabIndex = 12;
-            txtValorTotal.TabStop = false;
-            // 
-            // btnFinalizarPedido
-            // 
-            btnFinalizarPedido.Location = new Point(538, 407);
-            btnFinalizarPedido.Name = "btnFinalizarPedido";
-            btnFinalizarPedido.Size = new Size(75, 23);
-            btnFinalizarPedido.TabIndex = 13;
-            btnFinalizarPedido.Text = "Finalizar";
-            btnFinalizarPedido.UseVisualStyleBackColor = true;
-            // 
-            // btnCancelarPedido
-            // 
-            btnCancelarPedido.Location = new Point(619, 407);
-            btnCancelarPedido.Name = "btnCancelarPedido";
-            btnCancelarPedido.Size = new Size(75, 23);
-            btnCancelarPedido.TabIndex = 14;
-            btnCancelarPedido.Text = "Cancelar";
-            btnCancelarPedido.UseVisualStyleBackColor = true;
-            // 
-            // btnExcluirPedido
-            // 
-            btnExcluirPedido.Location = new Point(700, 407);
-            btnExcluirPedido.Name = "btnExcluirPedido";
-            btnExcluirPedido.Size = new Size(75, 23);
-            btnExcluirPedido.TabIndex = 16;
-            btnExcluirPedido.Text = "Excluir";
-            btnExcluirPedido.UseVisualStyleBackColor = true;
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Location = new Point(12, 415);
-            label10.Name = "label10";
-            label10.Size = new Size(70, 15);
-            label10.TabIndex = 25;
-            label10.Text = "Nro Pedido:";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(82, 407);
-            textBox1.Name = "textBox1";
-            textBox1.ReadOnly = true;
-            textBox1.Size = new Size(69, 23);
-            textBox1.TabIndex = 17;
-            textBox1.TabStop = false;
-            // 
-            // cbxVendedorPedido
-            // 
-            cbxVendedorPedido.FormattingEnabled = true;
-            cbxVendedorPedido.Location = new Point(78, 51);
-            cbxVendedorPedido.Name = "cbxVendedorPedido";
-            cbxVendedorPedido.Size = new Size(139, 23);
-            cbxVendedorPedido.TabIndex = 26;
-            cbxVendedorPedido.SelectedIndexChanged += cbxVendedorPedido_SelectedIndexChanged;
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Location = new Point(157, 415);
-            label11.Name = "label11";
-            label11.Size = new Size(91, 15);
-            label11.TabIndex = 28;
-            label11.Text = "Data do Pedido:";
-            // 
-            // txtDataDoPedido
-            // 
-            txtDataDoPedido.Location = new Point(254, 408);
-            txtDataDoPedido.Name = "txtDataDoPedido";
-            txtDataDoPedido.ReadOnly = true;
-            txtDataDoPedido.Size = new Size(173, 23);
-            txtDataDoPedido.TabIndex = 27;
-            txtDataDoPedido.TabStop = false;
+            pictureBox1.Image = Properties.Resources.sisV;
+            pictureBox1.Location = new Point(156, 407);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(311, 144);
+            pictureBox1.TabIndex = 31;
+            pictureBox1.TabStop = false;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(800, 450);
-            Controls.Add(label11);
-            Controls.Add(txtDataDoPedido);
-            Controls.Add(cbxVendedorPedido);
-            Controls.Add(label10);
-            Controls.Add(textBox1);
-            Controls.Add(btnExcluirPedido);
-            Controls.Add(btnCancelarPedido);
-            Controls.Add(btnFinalizarPedido);
-            Controls.Add(label9);
-            Controls.Add(txtValorTotal);
-            Controls.Add(label8);
-            Controls.Add(txtQtdItens);
-            Controls.Add(label4);
+            ClientSize = new Size(610, 563);
+            Controls.Add(pictureBox1);
+            Controls.Add(label12);
+            Controls.Add(txtIdPessoa);
             Controls.Add(label3);
             Controls.Add(cbxClientePedido);
             Controls.Add(label1);
@@ -407,15 +347,15 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
             Name = "Form1";
-            StartPosition = FormStartPosition.CenterScreen;
             Text = "Pdv Sistema de Vendas";
             WindowState = FormWindowState.Maximized;
-            Load += Form1_Load;
+           
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvItensSelecionados).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -433,7 +373,6 @@
         private Label label2;
         private ComboBox cbxClientePedido;
         private Label label3;
-        private Label label4;
         private GroupBox groupBox1;
         private Label label5;
         private Label label7;
@@ -441,19 +380,14 @@
         private Label label6;
         private TextBox txtValorUnitario;
         private Button btnExcluirItemPedido;
-        private Label label8;
-        private TextBox txtQtdItens;
-        private Label label9;
         private TextBox txtValorTotal;
-        private Button btnFinalizarPedido;
-        private Button btnCancelarPedido;
-        private Button btnExcluirPedido;
-        private Label label10;
-        private TextBox textBox1;
-        private ComboBox cbxVendedorPedido;
-        private Label label11;
-        private TextBox txtDataDoPedido;
         private DataGridView dgvItensSelecionados;
         public TextBox txtQuantidade;
+        private Button btnImprimirPedido;
+        private System.Drawing.Printing.PrintDocument printPedido;
+        private TextBox txtIdPessoa;
+        private Label label12;
+        private Label label4;
+        private PictureBox pictureBox1;
     }
 }

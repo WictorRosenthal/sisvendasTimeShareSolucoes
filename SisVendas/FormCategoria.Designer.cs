@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCategoria));
             label1 = new Label();
             txtNome = new TextBox();
             button1 = new Button();
@@ -49,7 +50,7 @@
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(234, 23);
             txtNome.TabIndex = 1;
-            txtNome.TextChanged += txtNome_TextChanged;
+           
             // 
             // button1
             // 
@@ -80,10 +81,11 @@
             Controls.Add(button1);
             Controls.Add(txtNome);
             Controls.Add(label1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormCategoria";
             StartPosition = FormStartPosition.CenterParent;
             Text = "FormCategoria";
-            Load += FormCategoria_Load;
+       
             ResumeLayout(false);
             PerformLayout();
         }

@@ -105,4 +105,4 @@ C:\Users\Wictor Rosenthal\Desktop\SistemaVendas\SisVendas\SisVendas\obj\Debug\ne
 C:\Users\Wictor Rosenthal\Desktop\SistemaVendas\SisVendas\SisVendas\obj\Debug\net8.0-windows\SisVendas.FormCadCategoriaProduto.resources
 C:\Users\Wictor Rosenthal\Desktop\SistemaVendas\SisVendas\SisVendas\obj\Debug\net8.0-windows\SisVendas.sourcelink.json
 C:\Users\Wictor Rosenthal\Desktop\SistemaVendas\SisVendas\SisVendas\obj\Debug\net8.0-windows\SisVendas.FormPessoa.resources
-C:\Users\Wictor Rosenthal\Desktop\SistemaVendas\SisVendas\SisVendas\obj\Debug\net8.0-windows\SisVendas.FormPedido.resources
+C:\Users\Wictor Rosenthal\Desktop\SistemaVendas\SisVendas\SisVendas\obj\Debug\net8.0-windows\SisVendas.FormCadCliente.resources

@@ -30,11 +30,11 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadCategoriaProduto));
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
             label1 = new Label();
             label2 = new Label();
             cbxCategoria = new ComboBox();
@@ -67,7 +67,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(356, 117);
+            label2.Location = new Point(355, 74);
             label2.Name = "label2";
             label2.Size = new Size(112, 15);
             label2.TabIndex = 1;
@@ -128,7 +128,7 @@
             // 
             btnAdicionarProduto.ImageIndex = 2;
             btnAdicionarProduto.ImageList = imgListAddEdEx;
-            btnAdicionarProduto.Location = new Point(471, 113);
+            btnAdicionarProduto.Location = new Point(470, 70);
             btnAdicionarProduto.Name = "btnAdicionarProduto";
             btnAdicionarProduto.Size = new Size(25, 25);
             btnAdicionarProduto.TabIndex = 4;
@@ -139,7 +139,7 @@
             // 
             btnEditarProduto.ImageIndex = 1;
             btnEditarProduto.ImageList = imgListAddEdEx;
-            btnEditarProduto.Location = new Point(502, 113);
+            btnEditarProduto.Location = new Point(501, 70);
             btnEditarProduto.Name = "btnEditarProduto";
             btnEditarProduto.Size = new Size(25, 25);
             btnEditarProduto.TabIndex = 5;
@@ -150,7 +150,7 @@
             // 
             btnExcluirProduto.ImageIndex = 0;
             btnExcluirProduto.ImageList = imgListAddEdEx;
-            btnExcluirProduto.Location = new Point(533, 114);
+            btnExcluirProduto.Location = new Point(532, 71);
             btnExcluirProduto.Name = "btnExcluirProduto";
             btnExcluirProduto.Size = new Size(25, 25);
             btnExcluirProduto.TabIndex = 6;
@@ -163,17 +163,17 @@
             dgvProdutos.AllowUserToDeleteRows = false;
             dgvProdutos.AllowUserToResizeColumns = false;
             dgvProdutos.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvProdutos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = SystemColors.Control;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle6.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
+            dgvProdutos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             dgvProdutos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvProdutos.Columns.AddRange(new DataGridViewColumn[] { clmCodigo, clmNome, clmPreco, clmEstoque, clmDescricao, clmQtdMininaEstoque });
-            dgvProdutos.Location = new Point(12, 145);
+            dgvProdutos.Location = new Point(12, 102);
             dgvProdutos.Name = "dgvProdutos";
             dgvProdutos.ReadOnly = true;
             dgvProdutos.RowHeadersVisible = false;
@@ -185,9 +185,9 @@
             // clmCodigo
             // 
             clmCodigo.DataPropertyName = "IdProduto";
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.Format = "D4";
-            clmCodigo.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.Format = "D4";
+            clmCodigo.DefaultCellStyle = dataGridViewCellStyle7;
             clmCodigo.HeaderText = "idproduto";
             clmCodigo.Name = "clmCodigo";
             clmCodigo.ReadOnly = true;
@@ -205,9 +205,9 @@
             // clmPreco
             // 
             clmPreco.DataPropertyName = "Preco";
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.Format = "C2";
-            clmPreco.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.Format = "C2";
+            clmPreco.DefaultCellStyle = dataGridViewCellStyle8;
             clmPreco.HeaderText = "Preço";
             clmPreco.Name = "clmPreco";
             clmPreco.ReadOnly = true;
@@ -217,9 +217,9 @@
             // clmEstoque
             // 
             clmEstoque.DataPropertyName = "Estoque";
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.Format = "D4";
-            clmEstoque.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.Format = "D4";
+            clmEstoque.DefaultCellStyle = dataGridViewCellStyle9;
             clmEstoque.HeaderText = "Estoque";
             clmEstoque.Name = "clmEstoque";
             clmEstoque.ReadOnly = true;
@@ -238,9 +238,9 @@
             // clmQtdMininaEstoque
             // 
             clmQtdMininaEstoque.DataPropertyName = "QtdMinima";
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.Format = "D4";
-            clmQtdMininaEstoque.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.Format = "D4";
+            clmQtdMininaEstoque.DefaultCellStyle = dataGridViewCellStyle10;
             clmQtdMininaEstoque.HeaderText = "Qtd Minina Estoque";
             clmQtdMininaEstoque.Name = "clmQtdMininaEstoque";
             clmQtdMininaEstoque.ReadOnly = true;
@@ -251,7 +251,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(568, 450);
+            ClientSize = new Size(568, 404);
             Controls.Add(dgvProdutos);
             Controls.Add(btnExcluirProduto);
             Controls.Add(btnEditarProduto);
@@ -262,9 +262,10 @@
             Controls.Add(cbxCategoria);
             Controls.Add(label2);
             Controls.Add(label1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormCadCategoriaProduto";
             StartPosition = FormStartPosition.CenterParent;
-            Text = "FormCadCategoriaProduto";
+            Text = "Cadastro Categoria/Produto";
             Load += FormCadCategoriaProduto_Load;
             ((System.ComponentModel.ISupportInitialize)dgvProdutos).EndInit();
             ResumeLayout(false);

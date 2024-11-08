@@ -3,36 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Wictor Rosenthal\\Desktop\\SistemaVendas\\SisVendas\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{30AB95A1-D68B-4B4C-AD6E-BE43AF83A42F}|SisVendas\\SisVendas.csproj|c:\\users\\wictor rosenthal\\desktop\\sistemavendas\\sisvendas\\sisvendas\\formsisvendas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{30AB95A1-D68B-4B4C-AD6E-BE43AF83A42F}|SisVendas\\SisVendas.csproj|solutionrelative:sisvendas\\formsisvendas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{30AB95A1-D68B-4B4C-AD6E-BE43AF83A42F}|SisVendas\\SisVendas.csproj|c:\\users\\wictor rosenthal\\desktop\\sistemavendas\\sisvendas\\sisvendas\\formsisvendas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{30AB95A1-D68B-4B4C-AD6E-BE43AF83A42F}|SisVendas\\SisVendas.csproj|solutionrelative:sisvendas\\formsisvendas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{30AB95A1-D68B-4B4C-AD6E-BE43AF83A42F}|SisVendas\\SisVendas.csproj|c:\\users\\wictor rosenthal\\desktop\\sistemavendas\\sisvendas\\sisvendas\\models\\itenvenda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{30AB95A1-D68B-4B4C-AD6E-BE43AF83A42F}|SisVendas\\SisVendas.csproj|solutionrelative:sisvendas\\models\\itenvenda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{30AB95A1-D68B-4B4C-AD6E-BE43AF83A42F}|SisVendas\\SisVendas.csproj|c:\\users\\wictor rosenthal\\desktop\\sistemavendas\\sisvendas\\sisvendas\\formcadcategoriaproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{30AB95A1-D68B-4B4C-AD6E-BE43AF83A42F}|SisVendas\\SisVendas.csproj|solutionrelative:sisvendas\\formcadcategoriaproduto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{30AB95A1-D68B-4B4C-AD6E-BE43AF83A42F}|SisVendas\\SisVendas.csproj|c:\\users\\wictor rosenthal\\desktop\\sistemavendas\\sisvendas\\sisvendas\\models\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{30AB95A1-D68B-4B4C-AD6E-BE43AF83A42F}|SisVendas\\SisVendas.csproj|solutionrelative:sisvendas\\models\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{30AB95A1-D68B-4B4C-AD6E-BE43AF83A42F}|SisVendas\\SisVendas.csproj|c:\\users\\wictor rosenthal\\desktop\\sistemavendas\\sisvendas\\sisvendas\\formcadcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30AB95A1-D68B-4B4C-AD6E-BE43AF83A42F}|SisVendas\\SisVendas.csproj|solutionrelative:sisvendas\\formcadcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{30AB95A1-D68B-4B4C-AD6E-BE43AF83A42F}|SisVendas\\SisVendas.csproj|c:\\users\\wictor rosenthal\\desktop\\sistemavendas\\sisvendas\\sisvendas\\models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{30AB95A1-D68B-4B4C-AD6E-BE43AF83A42F}|SisVendas\\SisVendas.csproj|solutionrelative:sisvendas\\models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{30AB95A1-D68B-4B4C-AD6E-BE43AF83A42F}|SisVendas\\SisVendas.csproj|c:\\users\\wictor rosenthal\\desktop\\sistemavendas\\sisvendas\\sisvendas\\formcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30AB95A1-D68B-4B4C-AD6E-BE43AF83A42F}|SisVendas\\SisVendas.csproj|solutionrelative:sisvendas\\formcategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{30AB95A1-D68B-4B4C-AD6E-BE43AF83A42F}|SisVendas\\SisVendas.csproj|c:\\users\\wictor rosenthal\\desktop\\sistemavendas\\sisvendas\\sisvendas\\models\\contatopessoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{30AB95A1-D68B-4B4C-AD6E-BE43AF83A42F}|SisVendas\\SisVendas.csproj|solutionrelative:sisvendas\\models\\contatopessoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{30AB95A1-D68B-4B4C-AD6E-BE43AF83A42F}|SisVendas\\SisVendas.csproj|c:\\users\\wictor rosenthal\\desktop\\sistemavendas\\sisvendas\\sisvendas\\formcategoria.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30AB95A1-D68B-4B4C-AD6E-BE43AF83A42F}|SisVendas\\SisVendas.csproj|solutionrelative:sisvendas\\formcategoria.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{30AB95A1-D68B-4B4C-AD6E-BE43AF83A42F}|SisVendas\\SisVendas.csproj|c:\\users\\wictor rosenthal\\desktop\\sistemavendas\\sisvendas\\sisvendas\\models\\enderecopessoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{30AB95A1-D68B-4B4C-AD6E-BE43AF83A42F}|SisVendas\\SisVendas.csproj|solutionrelative:sisvendas\\models\\enderecopessoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{30AB95A1-D68B-4B4C-AD6E-BE43AF83A42F}|SisVendas\\SisVendas.csproj|c:\\users\\wictor rosenthal\\desktop\\sistemavendas\\sisvendas\\sisvendas\\formpessoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{30AB95A1-D68B-4B4C-AD6E-BE43AF83A42F}|SisVendas\\SisVendas.csproj|solutionrelative:sisvendas\\formpessoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30AB95A1-D68B-4B4C-AD6E-BE43AF83A42F}|SisVendas\\SisVendas.csproj|c:\\users\\wictor rosenthal\\desktop\\sistemavendas\\sisvendas\\sisvendas\\formpessoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30AB95A1-D68B-4B4C-AD6E-BE43AF83A42F}|SisVendas\\SisVendas.csproj|solutionrelative:sisvendas\\formpessoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,104 +34,84 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ItenVenda.cs",
-              "DocumentMoniker": "C:\\Users\\Wictor Rosenthal\\Desktop\\SistemaVendas\\SisVendas\\SisVendas\\Models\\ItenVenda.cs",
-              "RelativeDocumentMoniker": "SisVendas\\Models\\ItenVenda.cs",
-              "ToolTip": "C:\\Users\\Wictor Rosenthal\\Desktop\\SistemaVendas\\SisVendas\\SisVendas\\Models\\ItenVenda.cs",
-              "RelativeToolTip": "SisVendas\\Models\\ItenVenda.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T03:34:23.382Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Produto.cs",
-              "DocumentMoniker": "C:\\Users\\Wictor Rosenthal\\Desktop\\SistemaVendas\\SisVendas\\SisVendas\\Models\\Produto.cs",
-              "RelativeDocumentMoniker": "SisVendas\\Models\\Produto.cs",
-              "ToolTip": "C:\\Users\\Wictor Rosenthal\\Desktop\\SistemaVendas\\SisVendas\\SisVendas\\Models\\Produto.cs",
-              "RelativeToolTip": "SisVendas\\Models\\Produto.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwBMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T23:19:42.472Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "FormCadCategoriaProduto.cs",
               "DocumentMoniker": "C:\\Users\\Wictor Rosenthal\\Desktop\\SistemaVendas\\SisVendas\\SisVendas\\FormCadCategoriaProduto.cs",
               "RelativeDocumentMoniker": "SisVendas\\FormCadCategoriaProduto.cs",
               "ToolTip": "C:\\Users\\Wictor Rosenthal\\Desktop\\SistemaVendas\\SisVendas\\SisVendas\\FormCadCategoriaProduto.cs",
               "RelativeToolTip": "SisVendas\\FormCadCategoriaProduto.cs",
-              "ViewState": "AgIAAHoAAAAAAAAAAAAqwIcAAABOAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T23:10:00.297Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ContatoPessoa.cs",
-              "DocumentMoniker": "C:\\Users\\Wictor Rosenthal\\Desktop\\SistemaVendas\\SisVendas\\SisVendas\\Models\\ContatoPessoa.cs",
-              "RelativeDocumentMoniker": "SisVendas\\Models\\ContatoPessoa.cs",
-              "ToolTip": "C:\\Users\\Wictor Rosenthal\\Desktop\\SistemaVendas\\SisVendas\\SisVendas\\Models\\ContatoPessoa.cs",
-              "RelativeToolTip": "SisVendas\\Models\\ContatoPessoa.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T23:00:51.607Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "EnderecoPessoa.cs",
-              "DocumentMoniker": "C:\\Users\\Wictor Rosenthal\\Desktop\\SistemaVendas\\SisVendas\\SisVendas\\Models\\EnderecoPessoa.cs",
-              "RelativeDocumentMoniker": "SisVendas\\Models\\EnderecoPessoa.cs",
-              "ToolTip": "C:\\Users\\Wictor Rosenthal\\Desktop\\SistemaVendas\\SisVendas\\SisVendas\\Models\\EnderecoPessoa.cs",
-              "RelativeToolTip": "SisVendas\\Models\\EnderecoPessoa.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T23:00:45.54Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Categoria.cs",
-              "DocumentMoniker": "C:\\Users\\Wictor Rosenthal\\Desktop\\SistemaVendas\\SisVendas\\SisVendas\\Models\\Categoria.cs",
-              "RelativeDocumentMoniker": "SisVendas\\Models\\Categoria.cs",
-              "ToolTip": "C:\\Users\\Wictor Rosenthal\\Desktop\\SistemaVendas\\SisVendas\\SisVendas\\Models\\Categoria.cs",
-              "RelativeToolTip": "SisVendas\\Models\\Categoria.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T22:59:44.184Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FormSisVendas.cs",
-              "DocumentMoniker": "C:\\Users\\Wictor Rosenthal\\Desktop\\SistemaVendas\\SisVendas\\SisVendas\\FormSisVendas.cs",
-              "RelativeDocumentMoniker": "SisVendas\\FormSisVendas.cs",
-              "ToolTip": "C:\\Users\\Wictor Rosenthal\\Desktop\\SistemaVendas\\SisVendas\\SisVendas\\FormSisVendas.cs",
-              "RelativeToolTip": "SisVendas\\FormSisVendas.cs",
-              "ViewState": "AgIAAKAAAAAAAAAAAAAmwK4AAABHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T22:32:43.957Z",
+              "WhenOpened": "2024-11-08T22:56:50.673Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FormSisVendas.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Wictor Rosenthal\\Desktop\\SistemaVendas\\SisVendas\\SisVendas\\FormSisVendas.cs",
-              "RelativeDocumentMoniker": "SisVendas\\FormSisVendas.cs",
-              "ToolTip": "C:\\Users\\Wictor Rosenthal\\Desktop\\SistemaVendas\\SisVendas\\SisVendas\\FormSisVendas.cs [Design]",
-              "RelativeToolTip": "SisVendas\\FormSisVendas.cs [Design]",
+              "Title": "FormCadCliente.cs",
+              "DocumentMoniker": "C:\\Users\\Wictor Rosenthal\\Desktop\\SistemaVendas\\SisVendas\\SisVendas\\FormCadCliente.cs",
+              "RelativeDocumentMoniker": "SisVendas\\FormCadCliente.cs",
+              "ToolTip": "C:\\Users\\Wictor Rosenthal\\Desktop\\SistemaVendas\\SisVendas\\SisVendas\\FormCadCliente.cs",
+              "RelativeToolTip": "SisVendas\\FormCadCliente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T21:50:16.968Z",
+              "WhenOpened": "2024-11-08T22:56:35.171Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FormCategoria.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Wictor Rosenthal\\Desktop\\SistemaVendas\\SisVendas\\SisVendas\\FormCategoria.Designer.cs",
+              "RelativeDocumentMoniker": "SisVendas\\FormCategoria.Designer.cs",
+              "ToolTip": "C:\\Users\\Wictor Rosenthal\\Desktop\\SistemaVendas\\SisVendas\\SisVendas\\FormCategoria.Designer.cs",
+              "RelativeToolTip": "SisVendas\\FormCategoria.Designer.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAUwFcAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T22:55:47.614Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormCategoria.cs",
+              "DocumentMoniker": "C:\\Users\\Wictor Rosenthal\\Desktop\\SistemaVendas\\SisVendas\\SisVendas\\FormCategoria.cs",
+              "RelativeDocumentMoniker": "SisVendas\\FormCategoria.cs",
+              "ToolTip": "C:\\Users\\Wictor Rosenthal\\Desktop\\SistemaVendas\\SisVendas\\SisVendas\\FormCategoria.cs",
+              "RelativeToolTip": "SisVendas\\FormCategoria.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T22:55:41.016Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FormPessoa.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Wictor Rosenthal\\Desktop\\SistemaVendas\\SisVendas\\SisVendas\\FormPessoa.cs",
+              "RelativeDocumentMoniker": "SisVendas\\FormPessoa.cs",
+              "ToolTip": "C:\\Users\\Wictor Rosenthal\\Desktop\\SistemaVendas\\SisVendas\\SisVendas\\FormPessoa.cs [Design]",
+              "RelativeToolTip": "SisVendas\\FormPessoa.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T22:55:26.837Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FormPessoa.cs",
+              "DocumentMoniker": "C:\\Users\\Wictor Rosenthal\\Desktop\\SistemaVendas\\SisVendas\\SisVendas\\FormPessoa.cs",
+              "RelativeDocumentMoniker": "SisVendas\\FormPessoa.cs",
+              "ToolTip": "C:\\Users\\Wictor Rosenthal\\Desktop\\SistemaVendas\\SisVendas\\SisVendas\\FormPessoa.cs",
+              "RelativeToolTip": "SisVendas\\FormPessoa.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T22:55:05.495Z",
+              "EditorCaption": ""
             }
           ]
         }
