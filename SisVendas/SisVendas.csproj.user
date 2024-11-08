@@ -19,8 +19,5 @@
     <Compile Update="FormSisVendas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FormItens.cs">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
 </Project>

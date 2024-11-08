@@ -1,4 +1,5 @@
 using SisVendas.Models;
+using System;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
@@ -11,12 +12,12 @@ namespace SisVendas
         int qtd;
         double subtotal, total, preco;
         DataTable carrinho = new DataTable();
+
         #endregion
         public Form1()
         {
             InitializeComponent();
 
-            carrinho.Columns.Add("Código", typeof(int));
             carrinho.Columns.Add("Produto", typeof(string));
             carrinho.Columns.Add("Qtd", typeof(int));
             carrinho.Columns.Add("Preço", typeof(double));
@@ -113,10 +114,17 @@ namespace SisVendas
 
         private void btnAdicionarItenPedido_Click(object sender, EventArgs e)
         {
-            using (var form = new FormItens())
-            {
-                form.ShowDialog();
-            }
+
+            Produto produto = new Produto();
+            qtd = int.Parse(txtQuantidade.Text);
+            preco = double.Parse(produto.Preco.ToString());
+            //preco = double.Parse(txtValorUnitario.Text);
+            subtotal = qtd * preco;
+            total += subtotal;
+            carrinho.Rows.Add(txtNome.Text, txtQuantidade.Text, preco, subtotal);
+           
+           
+
         }
 
         private void txtNome_KeyPress(object sender, KeyPressEventArgs e)
@@ -143,6 +151,21 @@ namespace SisVendas
 
         private void label2_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnExcluirItemPedido_Click(object sender, EventArgs e)
+        {
+            double subproduto = double.Parse(dgvItensSelecionados.CurrentRow.Cells[3].Value.ToString());
+            int indice = dgvItensSelecionados.CurrentRow.Index;
+            DataRow linha = carrinho.Rows[indice];
+            carrinho.Rows.RemoveAt(indice);
+            carrinho.AcceptChanges();
+
+            total -= subproduto;
+            txtValorTotal.Text = subproduto.ToString("C");
+
+            MessageBox.Show("Item Removido do carrinho", "Informação");
 
         }
     }

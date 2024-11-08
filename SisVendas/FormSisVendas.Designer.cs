@@ -45,7 +45,6 @@
             groupBox1 = new GroupBox();
             dgvItensSelecionados = new DataGridView();
             btnExcluirItemPedido = new Button();
-            btnAterarItenPedido = new Button();
             label7 = new Label();
             txtEstoque = new TextBox();
             label6 = new Label();
@@ -181,7 +180,6 @@
             // 
             groupBox1.Controls.Add(dgvItensSelecionados);
             groupBox1.Controls.Add(btnExcluirItemPedido);
-            groupBox1.Controls.Add(btnAterarItenPedido);
             groupBox1.Controls.Add(label7);
             groupBox1.Controls.Add(txtEstoque);
             groupBox1.Controls.Add(label6);
@@ -214,21 +212,12 @@
             // 
             btnExcluirItemPedido.ImageIndex = 3;
             btnExcluirItemPedido.ImageList = imgListPedido;
-            btnExcluirItemPedido.Location = new Point(431, 228);
+            btnExcluirItemPedido.Location = new Point(461, 35);
             btnExcluirItemPedido.Name = "btnExcluirItemPedido";
             btnExcluirItemPedido.Size = new Size(25, 25);
             btnExcluirItemPedido.TabIndex = 10;
             btnExcluirItemPedido.UseVisualStyleBackColor = true;
-            // 
-            // btnAterarItenPedido
-            // 
-            btnAterarItenPedido.ImageIndex = 4;
-            btnAterarItenPedido.ImageList = imgListPedido;
-            btnAterarItenPedido.Location = new Point(400, 228);
-            btnAterarItenPedido.Name = "btnAterarItenPedido";
-            btnAterarItenPedido.Size = new Size(25, 25);
-            btnAterarItenPedido.TabIndex = 9;
-            btnAterarItenPedido.UseVisualStyleBackColor = true;
+            btnExcluirItemPedido.Click += btnExcluirItemPedido_Click;
             // 
             // label7
             // 
@@ -447,13 +436,11 @@
         private Label label4;
         private GroupBox groupBox1;
         private Label label5;
-        private TextBox txtQuantidade;
         private Label label7;
         private TextBox txtEstoque;
         private Label label6;
         private TextBox txtValorUnitario;
         private Button btnExcluirItemPedido;
-        private Button btnAterarItenPedido;
         private Label label8;
         private TextBox txtQtdItens;
         private Label label9;
@@ -467,5 +454,6 @@
         private Label label11;
         private TextBox txtDataDoPedido;
         private DataGridView dgvItensSelecionados;
+        public TextBox txtQuantidade;
     }
 }
