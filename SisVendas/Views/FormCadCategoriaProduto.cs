@@ -19,13 +19,16 @@ namespace SisVendas
             InitializeComponent();
 
         }
+        #region Método Atualiza categorias
         private void AtualizarCbxCategoria(SisVendasContext db)
         {
             cbxCategoria.DataSource = db.Categorias.ToList();
             cbxCategoria.DisplayMember = "Nome";
             cbxCategoria.ValueMember = "IdCategoria";
         }
+        #endregion
 
+        #region Método Atualiza Produtos
         private void AtualizarProdutos(SisVendasContext db)
         {
             if (cbxCategoria.Items.Count > 0)
@@ -40,7 +43,7 @@ namespace SisVendas
             }
 
         }
-
+        #endregion
         private void btnAdicionarCategoria_Click(object sender, EventArgs e)
         {
             using (var form = new FormCategoria())

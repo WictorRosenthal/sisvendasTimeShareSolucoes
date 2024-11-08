@@ -24,6 +24,7 @@ namespace SisVendas
             carrinho.Columns.Add("Qtd", typeof(int));
             carrinho.Columns.Add("Preço", typeof(double));
             carrinho.Columns.Add("Subtotal", typeof(double));
+            carrinho.Columns.Add("Status", typeof(string));
 
             dgvItensSelecionados.DataSource = carrinho;
         }
@@ -154,7 +155,11 @@ namespace SisVendas
 
         private void btnAdicionarItenPedido_Click(object sender, EventArgs e)
         {
-
+            if (string.IsNullOrWhiteSpace(txtQuantidade.Text) || string.IsNullOrWhiteSpace(txtValorUnitario.Text))
+            {
+                MessageBox.Show("Por favor, preencha a quantidade e o valor unitário.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             qtd = int.Parse(txtQuantidade.Text);
             preco = double.Parse(txtValorUnitario.Text, NumberStyles.Currency, new CultureInfo("pt-BR"));
             //preco = double.Parse(txtValorUnitario.Text);

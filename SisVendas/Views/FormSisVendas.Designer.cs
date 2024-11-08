@@ -30,7 +30,7 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             imgListPedido = new ImageList(components);
             menuStrip1 = new MenuStrip();
             cadastrosToolStripMenuItem = new ToolStripMenuItem();
@@ -58,6 +58,10 @@
             txtIdPessoa = new TextBox();
             label12 = new Label();
             pictureBox1 = new PictureBox();
+            gpbPendente = new GroupBox();
+            gpbProducao = new GroupBox();
+            gpbRetirada = new GroupBox();
+            label8 = new Label();
             menuStrip1.SuspendLayout();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvItensSelecionados).BeginInit();
@@ -81,7 +85,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { cadastrosToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(610, 24);
+            menuStrip1.Size = new Size(858, 24);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -112,7 +116,6 @@
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(184, 23);
             txtNome.TabIndex = 3;
-           
             txtNome.KeyPress += txtNome_KeyPress;
             // 
             // label1
@@ -144,7 +147,6 @@
             label2.Size = new Size(148, 15);
             label2.TabIndex = 4;
             label2.Text = "Digite o nome do produto!";
-           
             // 
             // cbxClientePedido
             // 
@@ -186,7 +188,6 @@
             groupBox1.TabIndex = 14;
             groupBox1.TabStop = false;
             groupBox1.Text = "Itens do Pedido";
-          
             // 
             // label4
             // 
@@ -213,14 +214,14 @@
             dgvItensSelecionados.AllowUserToDeleteRows = false;
             dgvItensSelecionados.AllowUserToResizeColumns = false;
             dgvItensSelecionados.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvItensSelecionados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvItensSelecionados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvItensSelecionados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvItensSelecionados.Location = new Point(6, 66);
             dgvItensSelecionados.Name = "dgvItensSelecionados";
@@ -323,18 +324,59 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.sisV;
-            pictureBox1.Location = new Point(156, 407);
+            pictureBox1.Location = new Point(162, 420);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(311, 144);
+            pictureBox1.Size = new Size(322, 144);
             pictureBox1.TabIndex = 31;
             pictureBox1.TabStop = false;
+            // 
+            // gpbPendente
+            // 
+            gpbPendente.Location = new Point(573, 125);
+            gpbPendente.Name = "gpbPendente";
+            gpbPendente.Size = new Size(273, 100);
+            gpbPendente.TabIndex = 32;
+            gpbPendente.TabStop = false;
+            gpbPendente.Text = "Pendentes";
+            // 
+            // gpbProducao
+            // 
+            gpbProducao.Location = new Point(573, 231);
+            gpbProducao.Name = "gpbProducao";
+            gpbProducao.Size = new Size(273, 100);
+            gpbProducao.TabIndex = 33;
+            gpbProducao.TabStop = false;
+            gpbProducao.Text = "Produção";
+            // 
+            // gpbRetirada
+            // 
+            gpbRetirada.Location = new Point(573, 344);
+            gpbRetirada.Name = "gpbRetirada";
+            gpbRetirada.Size = new Size(273, 100);
+            gpbRetirada.TabIndex = 34;
+            gpbRetirada.TabStop = false;
+            gpbRetirada.Text = "Retirada";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Arial Black", 20F);
+            label8.Location = new Point(657, 71);
+            label8.Name = "label8";
+            label8.Size = new Size(114, 38);
+            label8.TabIndex = 35;
+            label8.Text = "Status";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(610, 563);
+            ClientSize = new Size(858, 576);
+            Controls.Add(label8);
+            Controls.Add(gpbRetirada);
+            Controls.Add(gpbProducao);
+            Controls.Add(gpbPendente);
             Controls.Add(pictureBox1);
             Controls.Add(label12);
             Controls.Add(txtIdPessoa);
@@ -348,8 +390,6 @@
             MainMenuStrip = menuStrip1;
             Name = "Form1";
             Text = "Pdv Sistema de Vendas";
-            WindowState = FormWindowState.Maximized;
-           
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             groupBox1.ResumeLayout(false);
@@ -389,5 +429,9 @@
         private Label label12;
         private Label label4;
         private PictureBox pictureBox1;
+        private GroupBox gpbPendente;
+        private GroupBox gpbProducao;
+        private GroupBox gpbRetirada;
+        private Label label8;
     }
 }
